@@ -1,0 +1,14 @@
+# Databricks notebook source
+resources:
+  jobs:
+    New_Job_Feb_09_2026_12_10_PM:
+      name: New Job Feb 09, 2026, 12:10 PM
+      tasks:
+        - task_key: job1_git
+          notebook_task:
+            notebook_path: ../../src/ingestion/ingestion.ipynb
+            base_parameters:
+              catalog_name: ${var.catalog}
+            source: WORKSPACE
+      queue:
+        enabled: true
